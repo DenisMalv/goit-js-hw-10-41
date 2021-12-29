@@ -22,7 +22,8 @@ clearMarkup()
 const name = event.target.value.trim()
     if (name.length >= 1) {
         fetchCountries(name)
-        .then((responce) => {
+            .then((responce) => {
+            console.log(responce)
             if (responce.length > 10) {
                 return Notify.info("Too many matches found.Please enter a more specific name.");
             }
